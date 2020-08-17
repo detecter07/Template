@@ -1,0 +1,308 @@
+*{
+  box-sizing:border-box;
+}
+header{
+  width: 100%;
+  min-height: 120px;
+  max-height: 400px;
+  background-color: #292626;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+ nav {
+  display: inline-block;
+  width: 100%;
+  position:relative;
+  height: 80px;
+  transition: 0.7s;
+
+}
+
+.toogle{
+  width: 100%;
+  padding: 13px 20px;
+  background: #001f44;
+  text-align: right;
+  box-sizing: border-box;
+  color: #fff;
+  font-size: 25px;
+  display: none;
+}
+ nav ul{
+  list-style: none;
+  width: 100%;
+  background-color: #001f44;
+}
+ nav ul li {
+   display: inline-block;
+   padding: 10px 10px 15px 10px;
+   text-align: center;
+   margin: 12px auto;
+}
+ nav ul li a{
+  text-decoration: none;
+  color: white;
+  position: relative;
+  text-transform:capitalize;
+  letter-spacing: 1px;
+}
+ nav ul li a:hover{
+  color: green;
+  border-bottom: 3px solid green
+}
+/*header nav ul li a:hover::after{
+  color: green;
+  content: '';
+  border-bottom: 3px solid green;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+*/
+ nav ul li a.active{
+  border-bottom: 3px solid green;
+  color: green
+}
+
+main{
+  width: 100%;
+  position: relative;
+  min-height: 900px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+main > article{
+  width: 68%;
+  float: left;
+  background-color: white;
+  min-height: 600px;
+  margin-left: 36px;
+  margin-top: 15px;
+}
+main > article > header{
+  padding: 5px;
+  margin: 10px auto;
+  width: 91%;
+  background-color: white;
+}
+main > article .list{
+  overflow: hidden;
+  background: beige;
+  padding: 10px 5px;
+  margin: 2%;
+  position: relative;
+  min-height: 400px;
+}
+main > article  .list img{
+  float: left;
+  margin: 0 17px;
+
+}
+main > article  .list > span{
+  position: absolute;
+    bottom: 15%;
+    left: 4%;
+  }
+main > article  .list > p{
+  margin: 0 5px;
+  color: grey;
+  line-height: 1.7;
+}
+
+main > aside{
+  width: 25%;
+  float: right;
+  background-color: #b8b7bd;
+  min-height: 186px;
+  margin-top: 15px;
+  position: relative;
+  text-align: center;
+  right: 2%;
+}
+main aside .closeup{
+  position: absolute;
+  top: 10px;
+  font-size: 17px;
+  color: black;
+  z-index: 999;
+  left: 6px;
+}
+main > aside h2{
+  height: 40px;
+  width: 100%;
+  position: absolute;
+  background-color: grey;
+  color: white;
+  margin: 0;
+}
+main > aside ul{
+  list-style: none;
+  margin-top: 45px;
+}
+main > aside ul li{
+  padding: 4px 0;
+
+}
+main > aside ul li a{
+  text-decoration: none;
+  color: #0a0527;
+  cursor: pointer;
+  width: 100%;
+}
+main > aside ul li a:hover{
+  color: green;
+}
+
+
+.clearfix{
+  clear: both;
+}
+
+footer{
+  position: absolute;
+  background: black;
+  color: white;
+  width: 100%;
+  min-height: 170px;
+  overflow: auto;
+}
+footer .box-footer{
+  width: 30%;
+  display: inline-block;
+}
+footer .box-footer ul{
+  margin: 20px auto;
+  list-style: none;
+}
+footer .box-footer ul li{
+  margin-top: 5px;
+}
+footer .box-footer ul li a{
+  text-decoration: none;
+  color: #999;
+  position: relative;
+  font-size: 14px;
+  font-family: serif;
+}
+
+footer .box-footer ul li a:hover{
+  color: green;
+}
+footer .box-footer ul li a:hover::after{
+  color: green;
+  content: '';
+  border-bottom: 3px solid green;
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+footer .address{
+  margin: 21px 22px;
+}
+
+footer .address address{
+  float: left;
+  margin-bottom: 20px;
+  line-height: 1.8
+}
+footer .address  span{
+  color: grey;
+}
+/*end footer */
+
+/* start media */
+@media (max-width:768px) {
+  .toogle{
+    display: block;
+  }
+   nav ul{
+    width: 100%;
+    display: none;
+    background: #092e59;
+    position: relative;
+    bottom: 16px;
+    padding-bottom: 10px;
+  }
+   nav ul li{
+    display: block;
+    width: 100%
+    text-align: center;
+
+  }
+  nav ul li a:hover{
+    color: none;
+  }
+  nav ul li a.active{
+    border: none;
+    color: #FFF;
+  }
+  .show{
+    display:block;
+  }
+  .close{
+    display: none;
+  }
+  main > article {
+    margin-left: 0;
+  }
+  .togle{
+    width: 100%;
+  }
+  .tooogle{
+    left: -100%;
+  }
+  .sde{
+    position: fixed;
+    display: flex;
+
+    right: 30%;
+    width: 5%;
+    margin-top: 12px;
+    margin-bottom: 49px;
+  }
+
+  main > article .list {
+    animation: movedown 5s  ease-out ;
+    web-Webkit-animation: movedown 5s  ease-out;
+    moz-animation: movedown 5s  ease-out;
+  }
+  main aside{
+    width: 30%;
+    animation: sidebar 5s  ease forwards ;
+    web-Webkit-animation: sidebar 5s  ease forwards;
+    moz-animation: sidebar 5s  ease forwards;
+  }
+  main aside .closeup{
+    position: absolute;
+    top: 10px;
+    font-size: 17px;
+    color: black;
+    z-index: 999;
+    left: 6px;
+  }
+
+  @keyframes movedown {
+    from { transform: translateY(-200px);}
+    to { transform: translateY(-5px);}
+  }
+  @keyframes sidebar {
+    from { transform: translateX(200px);}
+    to { right: 10px; }
+  }
+  @keyframes content {
+    0%{
+      left:-60%;
+    }
+    10%{
+      left:-20%;
+    }
+    50%{
+      left:0%;
+    }
+  }
+
+}
